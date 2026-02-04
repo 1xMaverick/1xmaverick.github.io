@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Siddarth Kumar | Cyber Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+<header>
+  <h1>Siddarth Kumar</h1>
+  <p class="tagline">Learn → Understand → Exploit → Master</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#achievements">Achievements</a>
+  <a href="#certs">Certificates</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="hero">
+  <div class="hero-left">
+    <h2>
+      <!-- <span class="static-text">Cybersecurity</span> -->
+      <span id="dynamic-text" class="glitch-text"></span>
+    </h2>
+
+    <p>
+      Hi, I’m Siddarth Kumar — a cybersecurity student focused on SOC operations, penetration testing, CTFs, vulnerability research, and security automation.
+    
+    </p>
+    <div class="links">
+  <a href="https://github.com/1xMaverick" target="_blank">GitHub</a>
+  <a href="https://www.linkedin.com/in/siddarth07/" target="_blank">LinkedIn</a>
+  <a href="https://tryhackme.com/p/maverick001" target="_blank">TryHackMe</a>
+  <a href="https://drive.google.com/file/d/1DmHBOfFoWMZDvopRhUEe5wE-b2pFOPNs/view?usp=drive_link" target="_blank">Resume</a>
+</div>
+
+  </div>
+
+  <div class="hero-right">
+    <div class="profile-container">
+      <img src="profile.jpg" alt="Siddarth Kumar" class="profile-pic">
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    Cybersecurity engineering student specializing in vulnerability assessment, network and web penetration testing, and automated reconnaissance, with a strong interest in SOC operations. Passionate about red teaming, exploit research, and real-world security testing, while also understanding detection, alert triage, and incident response. Final-year BTech student actively learning AI and machine learning to integrate intelligent detection, automation, and threat analysis into modern security systems.
+  </p>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+
+  <div class="grid">
+
+    <!-- OFFENSIVE SECURITY -->
+    <div class="skill-card">
+      <h3>Offensive Security</h3>
+      <p><strong>Web:</strong> OWASP Top 10, Auth & Session Testing, IDOR, Input Validation</p>
+      <p><strong>Network:</strong> Port Scanning, Service Enumeration, Vulnerability Exploitation</p>
+      <p><strong>Methodology:</strong> VAPT Lifecycle, Bug Bounty Workflow, Security Reporting</p>
+    </div>
+
+    <!-- RECON & ENUMERATION -->
+    <div class="skill-card">
+      <h3>Recon & Enumeration</h3>
+      <p><strong>Subdomains:</strong> Amass, Passive & Active Enumeration</p>
+      <p><strong>Endpoints:</strong> Dirsearch, API & Directory Discovery</p>
+      <p><strong>Services:</strong> Nmap Version Detection, NSE Scripts</p>
+    </div>
+
+    <!-- SOC / BLUE TEAM -->
+    <div class="skill-card">
+      <h3>SOC / Blue Team</h3>
+      <p><strong>Monitoring:</strong> Network Traffic Analysis, Alert Triage</p>
+      <p><strong>Detection:</strong> Suricata IDS, Signature-Based Rules</p>
+      <p><strong>Analysis:</strong> PCAP & Log Investigation (Wireshark)</p>
+    </div>
+
+    <!-- REVERSE ENGINEERING -->
+    <div class="skill-card">
+      <h3>Reverse Engineering</h3>
+      <p><strong>Static:</strong> ELF/PE Inspection, Strings, Basic Disassembly</p>
+      <p><strong>Dynamic:</strong> Debugging, Runtime Behavior (GDB)</p>
+      <p><strong>Exploitation:</strong> Stack & Memory Layout, Buffer Overflow Basics</p>
+    </div>
+
+    <!-- TOOLS -->
+    <div class="skill-card">
+      <h3>Security Tools</h3>
+      <p><strong>Web & API:</strong> Burp Suite, SQLmap, Nuclei</p>
+      <p><strong>Network:</strong> Nmap, Metasploit</p>
+      <p><strong>Defense:</strong> Wireshark, Suricata</p>
+      <p><strong>Cracking:</strong> Hashcat</p>
+      <p><strong>Version Control:</strong> Git & GitHub</p>
+    </div>
+
+    <!-- PROGRAMMING -->
+    <div class="skill-card">
+      <h3>Programming & Automation</h3>
+      <p><strong>Python:</strong> Recon Automation, Vulnerability Scanners</p>
+      <p><strong>Bash:</strong> Workflow Scripting, Tool Chaining</p>
+      <p><strong>C:</strong> Memory & Low-Level Programming</p>
+      <p><strong>Web:</strong> HTML, CSS, JavaScript</p>
+    </div>
+
+  </div>
+</section>
+
+
+<section id="projects">
+  <h2>Projects</h2>
+
+  <div class="card">
+    <h3>Recon-X - Automated Security Reconnaissance System</h3>
+    <p>
+      Built Recon-X, an automated reconnaissance framework for penetration testing that performs target enumeration, service discovery, and vulnerability mapping. It integrates multiple recon techniques to gather actionable intelligence efficiently. The framework streamlines early-stage attacks by reducing manual recon time and noise.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Basic Intrusion Detection System (IDS)</h3>
+    <p>
+     Developed a Suricata-based intrusion detection system with custom rules to detect network scanning, brute-force attacks, and malicious payloads. Alerts were validated through detailed Wireshark analysis and PCAP inspection to ensure accuracy. The system improved visibility into network threats and attack patterns.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>ML - Based SOC Dashboard</h3>
+    <p>
+      Built an ML-based SOC dashboard that collects and analyzes security logs to detect anomalous and malicious activity. The system uses machine learning to identify potential threats in real time and assigns risk scores to alerts. It helps SOC analysts quickly visualize, prioritize, and respond to incidents with reduced alert fatigue.
+    </p>
+  </div>
+</section>
+
+<section id="achievements">
+  <h2>Achievements</h2>
+  <ul>
+    <li>🥈 2nd Place – THM Hyd x HydPy x SenecaGlobal CTF (July 2025)</li>
+    <li>🔓 Identified IDOR Vulnerability on Dukaan (Privilege Escalation)</li>
+  </ul>
+</section>
+
+<section id="certs">
+  <h2>Certificates</h2>
+  <ul>
+    <li>Google Cybersecurity Professional Certificate</li>
+    <li>TryHackMe – Introduction to Cybersecurity</li>
+  </ul>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: siddarthkumar023@gmail.com</p>
+  <p>GitHub: <a href="https://github.com/1xMaverick" target="_blank">github.com/1XMaverick</a></p>
+  <p>Location: Hyderabad, India</p>
+</section>
+
+<footer>
+  <p>© 2026 Siddarth Kumar | Portfolio</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
