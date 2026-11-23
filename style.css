@@ -787,3 +787,43 @@ footer {
     transition-duration: .01ms !important;
   }
 }
+.skill-list {
+  margin-top: 55px;
+  border-top: 1px solid var(--line);
+}
+
+.skill-row {
+  display: grid;
+  grid-template-columns: 50px 190px 1fr;
+  gap: 20px;
+  padding: 27px 0;
+  border-bottom: 1px solid var(--line);
+  align-items: start;
+}
+
+.skill-row > span {
+  color: var(--muted);
+  font: 10px var(--mono);
+}
+
+.skill-row h3 {
+  margin: 0;
+  font: 600 15px var(--serif);
+}
+
+.skill-row p {
+  margin: 0;
+  color: var(--muted);
+  font: 12px/1.9 var(--mono);
+}
+
+@media (max-width: 650px) {
+  .skill-row {
+    grid-template-columns: 30px 1fr;
+    gap: 12px;
+  }
+
+  .skill-row > div {
+    grid-column: 2;
+  }
+}
