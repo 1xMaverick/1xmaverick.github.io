@@ -1,122 +1,95 @@
-.hero-visual {
-    min-height: 340px;
-  }
+/* =========================================================
+   SIDDARTH KUMAR — EDITORIAL CYBER PORTFOLIO
+   Dark reference: deep blue-black + stars + fine grid.
+   Light reference: warm white + restrained grey/blue grid.
+   ========================================================= */
 
-  .profile-frame {
-    width: min(76vw, 330px);
-  }
+:root {
+  --bg: #050711;
+  --bg-soft: #080b17;
+  --surface: rgba(10, 14, 28, .72);
+  --text: #f2f3f7;
+  --muted: #9298a8;
+  --line: rgba(214, 220, 235, .16);
+  --accent: #aab9d9;
+  --accent-strong: #dce7ff;
+  --grid: rgba(173, 189, 222, .055);
+  --shadow: rgba(0, 0, 0, .34);
 
-  .note-top { right: 0; }
-  .note-bottom { left: 0; }
+  --serif: "Cormorant Garamond", Georgia, serif;
+  --mono: "IBM Plex Mono", "Courier New", monospace;
+  --sans: "Inter", Arial, sans-serif;
 
-  .two-column,
-  .skill-grid,
-  .signal-grid,
-  .certificate-row {
-    grid-template-columns: 1fr;
-  }
-
-  .timeline-item,
-  .education {
-    grid-template-columns: 1fr;
-    gap: 13px;
-  }
-
-  .timeline-date {
-    padding-top: 0;
-  }
-
-  .project {
-    grid-template-columns: 42px 1fr;
-  }
-
-  .project-topline {
-    flex-direction: column;
-    gap: 5px;
-  }
-
-  .contact-links {
-    flex-wrap: wrap;
-  }
-
-  footer {
-    flex-direction: column;
-  }
+  --max: 1180px;
+  --pad: clamp(22px, 5vw, 72px);
 }
 
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  *, *::before, *::after {
-    animation-duration: .01ms !important;
-    transition-duration: .01ms !important;
-  }
-}
-.skill-list {
-  margin-top: 55px;
-  border-top: 1px solid var(--line);
-}
-
-.skill-row {
-  display: grid;
-  grid-template-columns: 35px 1fr;
-  gap: 20px;
-  align-items: start;
-  padding: 27px 0;
-  border-bottom: 1px solid var(--line);
+html[data-theme="light"] {
+  --bg: #f4f4f1;
+  --bg-soft: #ededeb;
+  --surface: rgba(255,255,252,.72);
+  --text: #10131a;
+  --muted: #68707c;
+  --line: rgba(16, 19, 26, .16);
+  --accent: #5f6f87;
+  --accent-strong: #182334;
+  --grid: rgba(45, 58, 78, .07);
+  --shadow: rgba(27, 34, 46, .10);
 }
 
-.skill-row > span {
-  padding-top: 3px;
-  color: var(--muted);
-  font: 10px/1.5 var(--mono);
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
 }
 
-.skill-row > div {
-  min-width: 0;
-  display: grid;
-  grid-template-columns: minmax(160px, 190px) minmax(0, 1fr);
-  gap: 20px;
-  align-items: start;
-}
-
-.skill-row h3 {
+body {
   margin: 0;
+  background: var(--bg);
   color: var(--text);
-  font: 600 20px/1.2 var(--serif);
-  letter-spacing: -.015em;
+  font-family: var(--sans);
+  line-height: 1.65;
+  overflow-x: hidden;
 }
 
-.skill-row p {
-  margin: 0;
-  color: var(--muted);
-  font: 400 12px/1.9 var(--mono);
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -2;
+  background:
+    radial-gradient(circle at 72% 14%, rgba(70, 103, 170, .13), transparent 28%),
+    radial-gradient(circle at 14% 78%, rgba(70, 103, 170, .07), transparent 25%);
 }
 
-@media (max-width: 900px) {
-  .skill-row > div {
-    grid-template-columns: minmax(140px, 170px) minmax(0, 1fr);
-    gap: 16px;
-  }
+.grid-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  opacity: .75;
+  background-image:
+    linear-gradient(to right, var(--grid) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid) 1px, transparent 1px);
+  background-size: 54px 54px;
+  mask-image: linear-gradient(to bottom, black 0%, black 72%, transparent 100%);
 }
 
-@media (max-width: 650px) {
-  .skill-row {
-    grid-template-columns: 28px 1fr;
-    gap: 12px;
-    padding: 23px 0;
-  }
+#stars {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -3;
+  opacity: .72;
+  pointer-events: none;
+}
 
-  .skill-row > div {
-    grid-template-columns: 1fr;
-    gap: 9px;
-  }
+html[data-theme="light"] #stars { opacity: .08; }
 
-  .skill-row h3 {
-    font-size: 19px;
-  }
-
-  .skill-row p {
-    font-size: 11px;
-    line-height: 1.85;
-  }
+a {
+  color: inherit;
+  text-decoration: none;
 }
